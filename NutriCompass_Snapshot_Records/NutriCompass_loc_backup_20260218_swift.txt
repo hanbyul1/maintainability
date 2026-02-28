@@ -1,3 +1,241 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8074a01e3b6fa54b5632b59661e197ecaa1b519f1d557ad4a89968c94fd92477
-size 13424
+NutriCompass_backup_20260218/  [Swift LOC: 9163]
+├── NutriCompass/  [Swift LOC: 9156]
+│   ├── AIProcessing/  [Swift LOC: 499]
+│   │   ├── Classification/  [Swift LOC: 11]
+│   │   │   └── EvidenceClassificationModule.swift (11 lines)
+│   │   ├── Extraction/  [Swift LOC: 10]
+│   │   │   └── IngredientExtractionModule.swift (10 lines)
+│   │   ├── Literature/  [Swift LOC: 11]
+│   │   │   └── LiteratureRetrievalModule.swift (11 lines)
+│   │   ├── Normalization/  [Swift LOC: 10]
+│   │   │   └── IngredientNormalizationModule.swift (10 lines)
+│   │   ├── OCR/  [Swift LOC: 422]
+│   │   │   ├── ImageOCRModule.swift (11 lines)
+│   │   │   └── OCRIngredientScanner.swift (411 lines)
+│   │   ├── Patterns/  [Swift LOC: 11]
+│   │   │   └── EvidencePatternDetectionModule.swift (11 lines)
+│   │   ├── Pipeline/  [Swift LOC: 14]
+│   │   │   └── Pipeline.swift (14 lines)
+│   │   └── Validation/  [Swift LOC: 10]
+│   │       └── OutputSchemaValidator.swift (10 lines)
+│   ├── Application/  [Swift LOC: 365]
+│   │   ├── Controllers/  [Swift LOC: 51]
+│   │   │   └── AnalysisController.swift (51 lines)
+│   │   ├── Permissions/  [Swift LOC: 11]
+│   │   │   └── PermissionConsentManager.swift (11 lines)
+│   │   ├── Results/  [Swift LOC: 20]
+│   │   │   └── ResultAssemblyCoordinator.swift (20 lines)
+│   │   ├── Routing/  [Swift LOC: 16]
+│   │   │   └── RequestRouter.swift (16 lines)
+│   │   ├── Session/  [Swift LOC: 256]
+│   │   │   ├── AuthManager.swift (196 lines)
+│   │   │   ├── SelectionStore.swift (53 lines)
+│   │   │   └── SessionStateManager.swift (7 lines)
+│   │   └── Workflow/  [Swift LOC: 11]
+│   │       └── WorkflowControllers.swift (11 lines)
+│   ├── Assets.xcassets/  [Swift LOC: 0]
+│   │   ├── AccentColor.colorset/  [Swift LOC: 0]
+│   │   │   └── Contents.json
+│   │   ├── AppIcon.appiconset/  [Swift LOC: 0]
+│   │   │   ├── Contents.json
+│   │   │   └── icon_fullbleed_no_white.png
+│   │   ├── Contents.json
+│   │   └── bg_cyber_supplement.imageset/  [Swift LOC: 0]
+│   │       ├── Contents.json
+│   │       └── bg_cyber_supplement.png
+│   ├── Data/  [Swift LOC: 1068]
+│   │   ├── Databases/  [Swift LOC: 125]
+│   │   │   ├── EvidenceDatabase.swift (94 lines)
+│   │   │   └── FaersDBLocator.swift (31 lines)
+│   │   ├── Index/  [Swift LOC: 12]
+│   │   │   └── SearchIndex.swift (12 lines)
+│   │   ├── Repositories/  [Swift LOC: 429]
+│   │   │   ├── FaersPairReactionRow.swift (6 lines)
+│   │   │   ├── FaersRepository.swift (194 lines)
+│   │   │   ├── InMemoryRepositories.swift (59 lines)
+│   │   │   ├── PubMedRepository.swift (115 lines)
+│   │   │   └── RepositoryInterfaces.swift (55 lines)
+│   │   ├── Stores/  [Swift LOC: 493]
+│   │   │   ├── AnalysisSnapshotStore.swift (96 lines)
+│   │   │   ├── DSLDSearchIndex.swift (112 lines)
+│   │   │   ├── DSLDSnapshot.swift (15 lines)
+│   │   │   ├── DSLDStore.swift (5 lines)
+│   │   │   ├── DownloadedDSLDStore.swift (86 lines)
+│   │   │   ├── EmptyDSLDStore.swift (19 lines)
+│   │   │   ├── LibraryStore.swift (72 lines)
+│   │   │   ├── MyIngredientsStore.swift (74 lines)
+│   │   │   └── UserSupplementLibraryStore.swift (14 lines)
+│   │   └── Versioning/  [Swift LOC: 9]
+│   │       └── ProvenanceManager.swift (9 lines)
+│   ├── Domain/  [Swift LOC: 1507]
+│   │   ├── Logic/  [Swift LOC: 41]
+│   │   │   ├── ComparisonEngine.swift (26 lines)
+│   │   │   └── ConstraintRules.swift (15 lines)
+│   │   ├── Models/  [Swift LOC: 472]
+│   │   │   ├── AnalysisSnapshot.swift (35 lines)
+│   │   │   ├── AuthState.swift (17 lines)
+│   │   │   ├── CoOccurrenceEvidence.swift (71 lines)
+│   │   │   ├── CoOccurrencePMIDResponse.swift (15 lines)
+│   │   │   ├── ConsumerConcernLevel.swift (10 lines)
+│   │   │   ├── Evidence.swift (51 lines)
+│   │   │   ├── EvidenceItem.swift (18 lines)
+│   │   │   ├── Ingredient.swift (15 lines)
+│   │   │   ├── Interaction.swift (68 lines)
+│   │   │   ├── InteractionDisplayModel.swift (18 lines)
+│   │   │   ├── RawInteractionSignal.swift (43 lines)
+│   │   │   ├── RiskColor.swift (5 lines)
+│   │   │   ├── SavedEvidence.swift (18 lines)
+│   │   │   ├── SelectionItem.swift (20 lines)
+│   │   │   └── Supplement.swift (68 lines)
+│   │   ├── OCR/  [Swift LOC: 661]
+│   │   │   ├── CanonicalResolver.swift (70 lines)
+│   │   │   └── OCRProcessingHelpers.swift (591 lines)
+│   │   ├── Services/  [Swift LOC: 274]
+│   │   │   ├── DefaultInteractionAnalysisService.swift (97 lines)
+│   │   │   ├── InteractionAnalysisService.swift (7 lines)
+│   │   │   ├── MeshNormalizer.swift (86 lines)
+│   │   │   └── RiskInterpretationEngine.swift (84 lines)
+│   │   └── Taxonomy/  [Swift LOC: 59]
+│   │       └── InteractionTaxonomy.swift (59 lines)
+│   ├── GoogleService-Info.plist
+│   ├── Info.plist
+│   ├── InfoPlist.xcstrings
+│   ├── Infrastructure/  [Swift LOC: 1477]
+│   │   ├── Cloud/  [Swift LOC: 20]
+│   │   │   ├── FirebaseAuthService.swift (14 lines)
+│   │   │   └── OptionalCloudServices.swift (6 lines)
+│   │   ├── Export/  [Swift LOC: 100]
+│   │   │   └── AnalysisPDFExporter.swift (100 lines)
+│   │   ├── ML/  [Swift LOC: 6]
+│   │   │   └── OnDeviceMLRuntime.swift (6 lines)
+│   │   ├── Models/  [Swift LOC: 28]
+│   │   │   ├── ModelVersionManager.swift (5 lines)
+│   │   │   └── ReactionEvidence.swift (23 lines)
+│   │   ├── Networking/  [Swift LOC: 661]
+│   │   │   ├── DSLDRemoteClient.swift (23 lines)
+│   │   │   ├── EvidenceAPIClient.swift (556 lines)
+│   │   │   └── PubMedSummaryResponse.swift (82 lines)
+│   │   ├── OCR/  [Swift LOC: 648]
+│   │   │   ├──  OCRCanonicalizer.swift (82 lines)
+│   │   │   ├── DSLDNameIndex.swift (129 lines)
+│   │   │   ├── DividerAwareOCRExtractor.swift (46 lines)
+│   │   │   ├── OCRIngredientChip.swift (27 lines)
+│   │   │   ├── OCRIngredientStrip.swift (19 lines)
+│   │   │   ├── OCRRegionExtractor.swift (238 lines)
+│   │   │   └── OCRTextCleaner.swift (107 lines)
+│   │   └── Storage/  [Swift LOC: 14]
+│   │       └── SecureStorage.swift (14 lines)
+│   ├── NutriCompass Localizations/  [Swift LOC: 0]
+│   │   ├── en.xcloc/  [Swift LOC: 0]
+│   │   │   ├── Localized Contents/  [Swift LOC: 0]
+│   │   │   │   └── en.xliff
+│   │   │   ├── Notes/  [Swift LOC: 0]
+│   │   │   ├── Source Contents/  [Swift LOC: 0]
+│   │   │   │   └── NutriCompass/  [Swift LOC: 0]
+│   │   │   │       ├── InfoPlist.xcstrings
+│   │   │   │       └── en.lproj/  [Swift LOC: 0]
+│   │   │   │           └── Localizable.strings
+│   │   │   └── contents.json
+│   │   └── ko.xcloc/  [Swift LOC: 0]
+│   │       ├── Localized Contents/  [Swift LOC: 0]
+│   │       │   └── ko.xliff
+│   │       ├── Notes/  [Swift LOC: 0]
+│   │       ├── Source Contents/  [Swift LOC: 0]
+│   │       │   └── NutriCompass/  [Swift LOC: 0]
+│   │       │       ├── InfoPlist.xcstrings
+│   │       │       └── en.lproj/  [Swift LOC: 0]
+│   │       │           └── Localizable.strings
+│   │       └── contents.json
+│   ├── NutriCompass.entitlements
+│   ├── Policy/  [Swift LOC: 144]
+│   │   ├── Audit/  [Swift LOC: 16]
+│   │   │   └── AuditLogger.swift (16 lines)
+│   │   ├── Boundary/  [Swift LOC: 7]
+│   │   │   └── ContextFirewall.swift (7 lines)
+│   │   ├── Errors/  [Swift LOC: 21]
+│   │   │   └── PolicyError.swift (21 lines)
+│   │   ├── Language/  [Swift LOC: 51]
+│   │   │   └── LanguagePolicyEngine.swift (51 lines)
+│   │   ├── Regulatory/  [Swift LOC: 18]
+│   │   │   └── RegulatoryMode.swift (18 lines)
+│   │   └── Schema/  [Swift LOC: 31]
+│   │       └── SchemaEnforcementEngine.swift (31 lines)
+│   ├── Presentation/  [Swift LOC: 4066]
+│   │   ├── App/  [Swift LOC: 35]
+│   │   │   └── NutriCompassApp.swift (35 lines)
+│   │   ├── Composition/  [Swift LOC: 160]
+│   │   │   ├── AppCompositionRoot.swift (90 lines)
+│   │   │   └── GlassCard.swift (70 lines)
+│   │   ├── Policy/  [Swift LOC: 16]
+│   │   │   └── UIStringPolicyEnforcer.swift (16 lines)
+│   │   ├── Root/  [Swift LOC: 89]
+│   │   │   ├── RootView.swift (73 lines)
+│   │   │   └── TransparentTabHost.swift (16 lines)
+│   │   ├── SampleData/  [Swift LOC: 26]
+│   │   │   └── SampleData.swift (26 lines)
+│   │   ├── ViewModels/  [Swift LOC: 590]
+│   │   │   ├── AppModel.swift (195 lines)
+│   │   │   ├── CoOccurrenceBarRow.swift (62 lines)
+│   │   │   ├── CoOccurrenceInlineViewModel.swift (62 lines)
+│   │   │   ├── CoOccurrencePMIDViewModel.swift (44 lines)
+│   │   │   ├── LibraryViewModel.swift (32 lines)
+│   │   │   ├── OCRScanGroup.swift (37 lines)
+│   │   │   ├── PairEvidenceViewModel.swift (109 lines)
+│   │   │   ├── TerminologyMappingResult.swift (6 lines)
+│   │   │   └── TerminologyMappingViewModel.swift (43 lines)
+│   │   └── Views/  [Swift LOC: 3150]
+│   │       ├── AnalysisResultView.swift (532 lines)
+│   │       ├── AnalysisSnapshotDetailView.swift (108 lines)
+│   │       ├── CameraCaptureView.swift (45 lines)
+│   │       ├── CoOccurrencePMIDView.swift (128 lines)
+│   │       ├── CoOccurrenceView.swift (168 lines)
+│   │       ├── ConsentView.swift (107 lines)
+│   │       ├── HomeView+Actions.swift (20 lines)
+│   │       ├── HomeView+SubViews.swift (607 lines)
+│   │       ├── HomeView.swift (129 lines)
+│   │       ├── ImagePicker.swift (45 lines)
+│   │       ├── LibraryView.swift (449 lines)
+│   │       ├── OCRScanButton.swift (28 lines)
+│   │       ├── PDFViewer.swift (24 lines)
+│   │       ├── ReactionBarRow.swift (76 lines)
+│   │       ├── ReactionDetailView.swift (158 lines)
+│   │       ├── ReactionEvidenceView.swift (80 lines)
+│   │       ├── RouteHostView.swift (14 lines)
+│   │       ├── SelectionCheckboxRow.swift (28 lines)
+│   │       ├── SelectionView.swift (42 lines)
+│   │       ├── SettingsView.swift (178 lines)
+│   │       ├── ShareSheet.swift (24 lines)
+│   │       ├── TerminologyMappingView.swift (160 lines)
+│   │       └── en.lproj/  [Swift LOC: 0]
+│   ├── Shared/  [Swift LOC: 30]
+│   │   ├── Array+Unique.swift (11 lines)
+│   │   └── NCError.swift (19 lines)
+│   ├── dsld_ingredients_snapshot.json
+│   ├── en.lproj/  [Swift LOC: 0]
+│   │   └── Localizable.strings
+│   ├── faers_summary.sqlite
+│   ├── ko.lproj/  [Swift LOC: 0]
+│   │   └── Localizable.strings
+│   ├── mesh_2026.sqlite
+│   ├── pubmed.sqlite
+│   └── ssm_visualizations/  [Swift LOC: 0]
+├── NutriCompass.xcodeproj/  [Swift LOC: 0]
+│   ├── project.pbxproj
+│   ├── project.xcworkspace/  [Swift LOC: 0]
+│   │   ├── contents.xcworkspacedata
+│   │   ├── xcshareddata/  [Swift LOC: 0]
+│   │   │   └── swiftpm/  [Swift LOC: 0]
+│   │   │       ├── Package.resolved
+│   │   │       └── configuration/  [Swift LOC: 0]
+│   │   └── xcuserdata/  [Swift LOC: 0]
+│   │       └── dae-kyookim.xcuserdatad/  [Swift LOC: 0]
+│   │           └── UserInterfaceState.xcuserstate
+│   └── xcuserdata/  [Swift LOC: 0]
+│       └── dae-kyookim.xcuserdatad/  [Swift LOC: 0]
+│           ├── xcdebugger/  [Swift LOC: 0]
+│           │   └── Breakpoints_v2.xcbkptlist
+│           └── xcschemes/  [Swift LOC: 0]
+│               └── xcschememanagement.plist
+├── Untitled.swift
+├── en.lproj/  [Swift LOC: 0]
+└── pubmed.sqlite
