@@ -1,0 +1,135 @@
+PartGuard/  [TOTAL LOC: 8070]
+
+└── PartGuard/  [LOC: 8070]
+    ├── AIProcessing/  [LOC: 117]
+    │   ├── Models/  [LOC: 37]
+    │   │   ├── OCRText.swift (18)
+    │   │   └── OCRToken.swift (19)
+    │   └── Services/  [LOC: 80]
+    │       └── VisionOCRService.swift (80)
+    ├── App/  [LOC: 52]
+    │   ├── DependencyContainer.swift (34)
+    │   └── PartGuardApp.swift (18)
+    ├── Application/  [LOC: 1197]
+    │   ├── Interfaces/  [LOC: 13]
+    │   │   └── PartPriceRepository.swift (13)
+    │   ├── Pipeline/  [LOC: 1076]
+    │   │   ├── PartDetailFormatter.swift (45)
+    │   │   ├── PartExtractor.swift (985)
+    │   │   ├── PriceLookupService.swift (32)
+    │   │   └── ReceiptInput.swift (14)
+    │   └── UseCases/  [LOC: 108]
+    │       ├── AnalyzeReceiptUseCase.swift (64)
+    │       ├── GetOBDCodesUseCase.swift (20)
+    │       └── UpdatePriceDataUseCase.swift (24)
+    ├── Assets.xcassets/  [LOC: 0]
+    │   ├── AccentColor.colorset/  [LOC: 0]
+    │   │   └── Contents.json
+    │   ├── AppIcon.appiconset/  [LOC: 0]
+    │   │   ├── Contents.json
+    │   │   └── appicon.png
+    │   ├── Contents.json
+    │   ├── background.imageset/  [LOC: 0]
+    │   │   ├── Contents.json
+    │   │   └── background.png
+    │   └── logo.imageset/  [LOC: 0]
+    │       ├── Contents.json
+    │       └── logo.png
+    ├── Data/  [LOC: 1275]
+    │   ├── Caching/  [LOC: 172]
+    │   │   ├── ImageCache.swift (67)
+    │   │   ├── ImageCacheKey.swift (12)
+    │   │   └── PriceCache.swift (93)
+    │   ├── Models/  [LOC: 561]
+    │   │   ├── DiagnosticData.swift (121)
+    │   │   ├── DiagnosticModels.swift (21)
+    │   │   ├── DiagnosticPartMapping.swift (131)
+    │   │   ├── DiagnosticPartSuggestion.swift (45)
+    │   │   ├── OBDData.swift (60)
+    │   │   ├── PartPriceRecord.swift (20)
+    │   │   ├── SavedDiagnosis.swift (56)
+    │   │   ├── SavedPart.swift (82)
+    │   │   └── SavedSymptom.swift (25)
+    │   ├── Providers/  [LOC: 406]
+    │   │   ├── CSVPriceDataProvider.swift (21)
+    │   │   ├── JSONPriceDataProvider.swift (20)
+    │   │   ├── OBDDictionaryLoader.swift (40)
+    │   │   ├── SymptomMapLoader.swift (41)
+    │   │   └── SymptomMapService.swift (284)
+    │   └── Repositories/  [LOC: 136]
+    │       ├── CachedPriceRepository.swift (32)
+    │       ├── LocalPriceRepository.swift (37)
+    │       ├── OBDCodeRepository.swift (26)
+    │       └── RemotePriceRepository.swift (41)
+    ├── Domain/  [LOC: 771]
+    │   ├── Entities/  [LOC: 124]
+    │   │   ├── ComparisonReport.swift (11)
+    │   │   ├── Part.swift (42)
+    │   │   ├── PriceComparison.swift (40)
+    │   │   ├── Vehicle.swift (15)
+    │   │   └── VehicleSystem.swift (16)
+    │   ├── Services/  [LOC: 597]
+    │   │   ├── DiagnosticEngine.swift (21)
+    │   │   ├── ImageLoader.swift (31)
+    │   │   ├── OBDInferenceEngine.swift (466)
+    │   │   ├── OverchargeDetector.swift (20)
+    │   │   └── PriceComparisonService.swift (59)
+    │   └── ValueObjects/  [LOC: 50]
+    │       ├── Money.swift (18)
+    │       ├── PartNumber.swift (16)
+    │       └── Percentage.swift (16)
+    ├── Info.plist
+    ├── Infrastructure/  [LOC: 988]
+    │   ├── Config/  [LOC: 24]
+    │   │   └── AppConfig.swift (24)
+    │   ├── Device/  [LOC: 47]
+    │   │   ├── CameraService.swift (23)
+    │   │   └── PhotoLibraryService.swift (24)
+    │   ├── Networking/  [LOC: 458]
+    │   │   ├── EbayAPIService.swift (307)
+    │   │   ├── HTTPClient.swift (12)
+    │   │   ├── RenderAPIService.swift (118)
+    │   │   └── URLSessionHTTPClient.swift (21)
+    │   └── Storage/  [LOC: 459]
+    │       ├── DiagnosticLearningStore.swift (134)
+    │       ├── FileStorageManager.swift (34)
+    │       ├── GarageStore.swift (266)
+    │       └── LocalCacheStore.swift (25)
+    ├── Presentation/  [LOC: 3625]
+    │   ├── Facade/  [LOC: 0]
+    │   ├── ViewModels/  [LOC: 1591]
+    │   │   ├── AnalysisResultViewModel.swift (30)
+    │   │   ├── DiagnosticPartSuggestionViewModel.swift (387)
+    │   │   ├── DiagnosticViewModel.swift (37)
+    │   │   └── ReceiptViewModel.swift (1137)
+    │   └── Views/  [LOC: 2034]
+    │       ├── AppBackgroundView.swift (18)
+    │       ├── CameraPicker.swift (46)
+    │       ├── ComparisonReportRow.swift (95)
+    │       ├── ComparisonReportView.swift (137)
+    │       ├── ConditionListView.swift (24)
+    │       ├── DiagnosticPartSuggestionView.swift (159)
+    │       ├── DiagnosticStepView.swift (270)
+    │       ├── GarageDetailView.swift (328)
+    │       ├── MainTabView.swift (50)
+    │       ├── MyGarageView.swift (191)
+    │       ├── OBDCodeListView.swift (27)
+    │       ├── OBDFlowRootView.swift (17)
+    │       ├── OBDResultView.swift (166)
+    │       ├── PartCardView.swift (75)
+    │       ├── PartStyleButton.swift (48)
+    │       ├── PrimaryActionButtonStyle.swift (30)
+    │       ├── ReceiptCaptureView.swift (155)
+    │       ├── RetryAsyncImage.swift (60)
+    │       ├── SettingsView.swift (80)
+    │       ├── SubsystemListView.swift (29)
+    │       └── SymptomListView.swift (29)
+    ├── Resources/  [LOC: 0]
+    │   ├── OBDDictionary.json
+    │   ├── codes.json
+    │   └── nhtsa_symptom_component_map.json
+    └── Shared/  [LOC: 45]
+        ├── Errors/  [LOC: 25]
+        │   └── ProcessingError.swift (25)
+        └── Logging/  [LOC: 20]
+            └── Logger.swift (20)

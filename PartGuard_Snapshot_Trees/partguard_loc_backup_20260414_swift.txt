@@ -1,0 +1,90 @@
+PartGuard/  [TOTAL LOC: 1540]
+
+└── PartGuard/  [LOC: 1540]
+    ├── AIProcessing/  [LOC: 82]
+    │   ├── Models/  [LOC: 37]
+    │   │   ├── OCRText.swift (18)
+    │   │   └── OCRToken.swift (19)
+    │   └── Services/  [LOC: 45]
+    │       └── VisionOCRService.swift (45)
+    ├── App/  [LOC: 97]
+    │   ├── DependencyContainer.swift (70)
+    │   └── PartGuardApp.swift (27)
+    ├── Application/  [LOC: 294]
+    │   ├── Interfaces/  [LOC: 26]
+    │   │   ├── OCRService.swift (13)
+    │   │   └── PartPriceRepository.swift (13)
+    │   ├── Pipeline/  [LOC: 219]
+    │   │   ├── PartDetailFormatter.swift (37)
+    │   │   ├── PartExtractor.swift (65)
+    │   │   ├── PriceLookupService.swift (29)
+    │   │   ├── ReceiptProcessingPipeline.swift (47)
+    │   │   ├── ResultFormatter.swift (20)
+    │   │   └── TextNormalizer.swift (21)
+    │   └── UseCases/  [LOC: 49]
+    │       ├── AnalyzeReceiptUseCase.swift (25)
+    │       └── UpdatePriceDataUseCase.swift (24)
+    ├── Assets.xcassets/  [LOC: 0]
+    │   ├── AccentColor.colorset/  [LOC: 0]
+    │   │   └── Contents.json
+    │   ├── AppIcon.appiconset/  [LOC: 0]
+    │   │   ├── Contents.json
+    │   │   └── appicon.png
+    │   ├── Contents.json
+    │   └── background.imageset/  [LOC: 0]
+    │       ├── Contents.json
+    │       └── background.png
+    ├── Data/  [LOC: 171]
+    │   ├── Models/  [LOC: 20]
+    │   │   └── PartPriceRecord.swift (20)
+    │   ├── Providers/  [LOC: 41]
+    │   │   ├── CSVPriceDataProvider.swift (21)
+    │   │   └── JSONPriceDataProvider.swift (20)
+    │   └── Repositories/  [LOC: 110]
+    │       ├── CachedPriceRepository.swift (32)
+    │       ├── LocalPriceRepository.swift (37)
+    │       └── RemotePriceRepository.swift (41)
+    ├── Domain/  [LOC: 200]
+    │   ├── Entities/  [LOC: 84]
+    │   │   ├── AnalysisResult.swift (20)
+    │   │   ├── Part.swift (31)
+    │   │   └── PriceComparison.swift (33)
+    │   ├── Services/  [LOC: 66]
+    │   │   ├── OverchargeDetector.swift (20)
+    │   │   └── PriceComparisonService.swift (46)
+    │   └── ValueObjects/  [LOC: 50]
+    │       ├── Money.swift (18)
+    │       ├── PartNumber.swift (16)
+    │       └── Percentage.swift (16)
+    ├── Infrastructure/  [LOC: 163]
+    │   ├── Config/  [LOC: 24]
+    │   │   └── AppConfig.swift (24)
+    │   ├── Device/  [LOC: 47]
+    │   │   ├── CameraService.swift (23)
+    │   │   └── PhotoLibraryService.swift (24)
+    │   ├── Networking/  [LOC: 33]
+    │   │   ├── HTTPClient.swift (12)
+    │   │   └── URLSessionHTTPClient.swift (21)
+    │   └── Storage/  [LOC: 59]
+    │       ├── FileStorageManager.swift (34)
+    │       └── LocalCacheStore.swift (25)
+    ├── Presentation/  [LOC: 488]
+    │   ├── Facade/  [LOC: 23]
+    │   │   └── PartGuardAnalyzerFacade.swift (23)
+    │   ├── ViewModels/  [LOC: 93]
+    │   │   ├── AnalysisResultViewModel.swift (30)
+    │   │   └── ReceiptViewModel.swift (63)
+    │   └── Views/  [LOC: 372]
+    │       ├── AnalysisResultView.swift (34)
+    │       ├── AppBackgroundView.swift (18)
+    │       ├── CameraPicker.swift (49)
+    │       ├── PartDetailView.swift (27)
+    │       ├── PartStyleButton.swift (48)
+    │       ├── ReceiptCaptureView.swift (130)
+    │       ├── ReceiptPreviewView.swift (41)
+    │       └── SettingsView.swift (25)
+    └── Shared/  [LOC: 45]
+        ├── Errors/  [LOC: 25]
+        │   └── ProcessingError.swift (25)
+        └── Logging/  [LOC: 20]
+            └── Logger.swift (20)
